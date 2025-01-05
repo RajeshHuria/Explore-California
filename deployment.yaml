@@ -16,6 +16,6 @@ spec:
         app: explorecalifornia.com
     spec:
       containers:
-      - image: localhost:2000/explorecalifornia.com
+      - image: localhost:5000/explorecalifornia.com
         name: explorecalifornia-com-4r6vm
         resources: {}

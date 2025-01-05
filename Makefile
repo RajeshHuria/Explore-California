@@ -3,7 +3,8 @@
 .PHONY: run_website install_kind install_kubectl create_kind_cluster \
 	create_docker_registry connect_registry_to_kind_network \
 	connect_registry_to_kind create_kind_cluster_with_registry \
-	delete_kind_cluser delete_docker_registry
+	delete_kind_cluser delete_docker_registry kubectl_create_service \
+	kubectl_service_port_forward kubectl_create_deployment
 
 run_website:
 	docker build -t explorecalifornia.com . && \
@@ -48,3 +49,17 @@ connect_kind_registry:
 
 kubectl_kill_all:
 	kubectl delete all --all --all-namespaces || true
+
+docker_tag_push_image_local_registry:
+	docker tag explorecalifornia.com localhost:5000/explorecalifornia.com && \
+	docker push localhost:5000/explorecalifornia.com
+
+kubectl_create_deployment: docker_tag_push_image_local_registry
+	kubectl apply -f .\deployment.yaml || true
+
+kubectl_create_service: kubectl_create_deployment
+	kubectl apply -f .\service.yaml || true
+
+kubectl_service_port_forward: kubectl_create_service
+	kubectl port-forward service/explorecalifornia-svc 8080:80 \
+	kubectl get all -l app=explorecalifornia.com
