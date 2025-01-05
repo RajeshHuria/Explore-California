@@ -1,5 +1,5 @@
 FROM nginx:alpine
-LABEL maintainer="Carlos Nunez <dev@carlosnunez.me>"
+LABEL maintainer="Rajesh Huria <rajesh.huria@gmail.com>"
 
 COPY website /website
 COPY nginx.conf /etc/nginx/nginx.conf

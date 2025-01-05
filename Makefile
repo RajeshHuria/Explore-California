@@ -7,7 +7,7 @@
 
 run_website:
 	docker build -t explorecalifornia.com . && \
-		docker run -p 3000:80 -d --name explorecalifornia.com --rm explorecalifornia.com
+		docker run -p 2000:80 -d --name explorecalifornia.com --rm explorecalifornia.com
 
 install_kubectl:
 	brew install kubectl || true;
@@ -23,12 +23,12 @@ connect_registry_to_kind: connect_registry_to_kind_network
 
 create_docker_registry:
 	if ! docker ps | grep -q 'local-registry'; \
-	then docker run -d -p 2000:2000 --name local-registry --restart=always registry:2; \
+	then docker run -d -p 5000:5000 --name local-registry --restart=always registry:2; \
 	else echo "---> local-registry is already running. There's nothing to do here."; \
 	fi
 
 create_kind_cluster: install_kind install_kubectl create_docker_registry
-	kind create cluster --image=kindest/node:v1.21.12 --name explorecalifornia.com --config ./kind_config.yaml || true
+	kind create cluster --image=kindest/node:v1.32.0 --name explorecalifornia.com --config ./kind_config.yaml || true
 	kubectl get nodes
 
 create_kind_cluster_with_registry: delete_kind_cluster
