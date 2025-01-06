@@ -1,5 +1,6 @@
-appName:  explore-california-website
+appName: explorecalifornia.com
 imageName: localhost:5000/explorecalifornia.com
-replicas: 1
+replicas: 2
 serviceName: explorecalifornia-svcs
+serviceAddress: explorecalifornia.com
 servicePort: 80
