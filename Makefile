@@ -4,11 +4,15 @@
 	create_docker_registry connect_registry_to_kind_network \
 	connect_registry_to_kind create_kind_cluster_with_registry \
 	delete_kind_cluser delete_docker_registry kubectl_create_service \
-	kubectl_service_port_forward kubectl_create_deployment
+	kubectl_service_port_forward kubectl_create_deployment run_website stop_website \
+	install_app
 
 run_website:
 	docker build -t explorecalifornia.com . && \
 		docker run -p 2000:80 -d --name explorecalifornia.com --rm explorecalifornia.com
+
+stop_website:
+	docker stop explorecalifornia.com
 
 install_kubectl:
 	brew install kubectl || true;
@@ -63,3 +67,6 @@ kubectl_create_service: kubectl_create_deployment
 kubectl_service_port_forward: kubectl_create_service
 	kubectl port-forward service/explorecalifornia-svc 8080:80 \
 	kubectl get all -l app=explorecalifornia.com
+
+install_app:
+	helm upgrade --atomic --install explore-california-website ./chart
