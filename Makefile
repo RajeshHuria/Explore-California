@@ -5,7 +5,7 @@
 	connect_registry_to_kind create_kind_cluster_with_registry \
 	delete_kind_cluser delete_docker_registry kubectl_create_service \
 	kubectl_service_port_forward kubectl_create_deployment run_website stop_website \
-	install_app
+	install_app clean_app_stack
 
 run_website:
 	docker build -t explorecalifornia.com . && \
@@ -70,3 +70,7 @@ kubectl_service_port_forward: kubectl_create_service
 
 install_app:
 	helm upgrade --atomic --install explore-california-website ./chart
+
+clean_app_stack:
+	kubectl delete deployment -n default explorecalifornia-com && kubectl delete service -n default explorecalifornia-svc && \
+	kubectl delete ingress -n default explorecalifornia-com && kubectl get all -l app=explorecalifornia-com
