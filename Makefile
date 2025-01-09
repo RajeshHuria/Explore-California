@@ -5,7 +5,7 @@
 	connect_registry_to_kind create_kind_cluster_with_registry \
 	delete_kind_cluser delete_docker_registry kubectl_create_service \
 	kubectl_service_port_forward kubectl_create_deployment run_website stop_website \
-	install_app clean_app_stack rollback_app
+	install_app clean_app_stack rollback_app uninstall_app
 
 run_website:
 	docker build -t explorecalifornia.com . && \
@@ -73,6 +73,9 @@ install_app:
 
 rollback_app:
 	 helm rollback explore-california-website 25 --namespace default
+
+uninstall_app:
+	 helm uninstall explore-california-website --namespace default
 
 clean_app_stack:
 	kubectl delete deployment -n default explorecalifornia.com && kubectl delete service -n default explorecalifornia-svc && \
