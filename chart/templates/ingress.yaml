@@ -3,13 +3,10 @@ kind: Ingress
 metadata:
   labels:
   name: {{ .Values.appName }}
-  annotations:
-    kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
   rules:
-  - http:
+  - host: explorecalifornia.com
+    http:
       paths:
       - backend:
           service:
