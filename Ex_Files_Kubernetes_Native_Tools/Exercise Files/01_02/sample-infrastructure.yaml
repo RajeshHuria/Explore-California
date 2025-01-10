@@ -100,7 +100,7 @@ metadata:
 spec:
   containers:
   - name: login
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -116,7 +116,7 @@ metadata:
 spec:
   containers:
   - name: login
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -132,7 +132,7 @@ metadata:
 spec:
   containers:
   - name: login
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -148,7 +148,7 @@ metadata:
 spec:
   containers:
   - name: cart
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -164,7 +164,7 @@ metadata:
 spec:
   containers:
   - name: cart
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -180,7 +180,7 @@ metadata:
 spec:
   containers:
   - name: cart
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 
 apiVersion: v1
@@ -197,7 +197,7 @@ metadata:
 spec:
   containers:
   - name: social
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -213,7 +213,7 @@ metadata:
 spec:
   containers:
   - name: social
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -229,7 +229,7 @@ metadata:
 spec:
   containers:
   - name: social
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -245,7 +245,7 @@ metadata:
 spec:
   containers:
   - name: catalog
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -261,7 +261,7 @@ metadata:
 spec:
   containers:
   - name: catalog
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -277,7 +277,7 @@ metadata:
 spec:
   containers:
   - name: catalog
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -293,7 +293,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -309,7 +309,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -325,7 +325,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -341,7 +341,7 @@ metadata:
 spec:
   containers:
   - name: ordering
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -357,7 +357,7 @@ metadata:
 spec:
   containers:
   - name: ordering
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -373,7 +373,7 @@ metadata:
 spec:
   containers:
   - name: ordering
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -389,7 +389,7 @@ metadata:
 spec:
   containers:
   - name: logger
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -405,5 +405,5 @@ metadata:
 spec:
   containers:
   - name: monitor
-    image: machelix/ruby:latest
+    image: machelix/nginx:latest
 ---
