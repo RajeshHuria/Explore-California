@@ -1,12 +1,12 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pink
 spec:
   selector:
     matchLabels:
-      app: punk
-  replicas: 1
+      app: pink
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
       - name: pink
-        image: karthequian/helloworld:latest
+        image: machelix/explorecalifornia.com
         ports:
         - containerPort: 80
+
+

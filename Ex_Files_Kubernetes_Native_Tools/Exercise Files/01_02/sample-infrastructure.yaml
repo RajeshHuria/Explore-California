@@ -45,14 +45,14 @@ metadata:
   namespace: web
   labels:
     env: development
-    dev-lead: karthik
+    dev-lead: Rajesh
     team: web
     application_type: ui
     release-version: "12.0"
 spec:
   containers:
-  - name: helloworld
-    image: karthequian/helloworld:latest
+  - name: explorecalifornia
+    image: machelix/explorecalifornia.com:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -62,13 +62,13 @@ metadata:
   labels:
     env: staging
     team: web
-    dev-lead: karthik
+    dev-lead: Rajesh
     application_type: ui
     release-version: "12.0"
 spec:
   containers:
-  - name: helloworld
-    image: karthequian/helloworld:latest
+  - name: explorecalifornia
+    image: machelix/explorecalifornia.com:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -78,13 +78,13 @@ metadata:
   labels:
     env: production
     team: web
-    dev-lead: karthik
+    dev-lead: Rajesh
     application_type: ui
     release-version: "12.0"
 spec:
   containers:
-  - name: helloworld
-    image: karthequian/helloworld:latest
+  - name: explorecalifornia
+    image: machelix/explorecalifornia.com:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -94,13 +94,13 @@ metadata:
   labels:
     env: development
     team: auth
-    dev-lead: jim
+    dev-lead: mia
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: login
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -110,13 +110,13 @@ metadata:
   labels:
     env: staging
     team: auth
-    dev-lead: jim
+    dev-lead: mia
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: login
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -126,13 +126,13 @@ metadata:
   labels:
     env: production
     team: auth
-    dev-lead: jim
+    dev-lead: mia
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: login
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -142,13 +142,13 @@ metadata:
   labels:
     env: development
     team: ecommerce
-    dev-lead: carisa
+    dev-lead: bulbul
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: cart
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -158,13 +158,13 @@ metadata:
   labels:
     env: staging
     team: ecommerce
-    dev-lead: carisa
+    dev-lead: bulbul
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: cart
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -174,13 +174,13 @@ metadata:
   labels:
     env: production
     team: ecommerce
-    dev-lead: carisa
+    dev-lead: bulbul
     application_type: api
     release-version: "1.0"
 spec:
   containers:
   - name: cart
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 
 apiVersion: v1
@@ -191,13 +191,13 @@ metadata:
   labels:
     env: development
     team: marketing
-    dev-lead: carisa
+    dev-lead: bulbul
     application_type: api
     release-version: "2.0"
 spec:
   containers:
   - name: social
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -213,7 +213,7 @@ metadata:
 spec:
   containers:
   - name: social
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -229,7 +229,7 @@ metadata:
 spec:
   containers:
   - name: social
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -239,13 +239,13 @@ metadata:
   labels:
     env: development
     team: ecommerce
-    dev-lead: daniel
+    dev-lead: anu
     application_type: api
     release-version: "4.0"
 spec:
   containers:
   - name: catalog
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -255,13 +255,13 @@ metadata:
   labels:
     env: staging
     team: ecommerce
-    dev-lead: daniel
+    dev-lead: anu
     application_type: api
     release-version: "4.0"
 spec:
   containers:
   - name: catalog
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -271,13 +271,13 @@ metadata:
   labels:
     env: production
     team: ecommerce
-    dev-lead: daniel
+    dev-lead: anu
     application_type: api
     release-version: "4.0"
 spec:
   containers:
   - name: catalog
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -293,7 +293,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -309,7 +309,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -325,7 +325,7 @@ metadata:
 spec:
   containers:
   - name: quote
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -335,13 +335,13 @@ metadata:
   labels:
     env: development
     team: purchasing
-    dev-lead: chen
+    dev-lead: gunn
     application_type: backend
     release-version: "2.0"
 spec:
   containers:
   - name: ordering
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -351,13 +351,13 @@ metadata:
   labels:
     env: staging
     team: purchasing
-    dev-lead: chen
+    dev-lead: gunn
     application_type: backend
     release-version: "2.0"
 spec:
   containers:
   - name: ordering
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -367,13 +367,13 @@ metadata:
   labels:
     env: production
     team: purchasing
-    dev-lead: chen
+    dev-lead: gunn
     application_type: backend
     release-version: "2.0"
 spec:
   containers:
   - name: ordering
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -383,13 +383,13 @@ metadata:
   labels:
     env: production
     team: infrastructure
-    dev-lead: tracey
+    dev-lead: pari
     application_type: backend
     release-version: "2.0"
 spec:
   containers:
   - name: logger
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
 apiVersion: v1
 kind: Pod
@@ -399,11 +399,11 @@ metadata:
   labels:
     env: production
     team: infrastructure
-    dev-lead: tracey
+    dev-lead: pari
     application_type: backend
     release-version: "2.0"
 spec:
   containers:
   - name: monitor
-    image: karthequian/ruby:latest
+    image: machelix/ruby:latest
 ---
