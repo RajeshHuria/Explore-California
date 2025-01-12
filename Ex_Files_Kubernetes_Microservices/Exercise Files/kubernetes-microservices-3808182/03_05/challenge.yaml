@@ -35,9 +35,9 @@ metadata:
     app: nginx-service
 spec:
   selector:
-    # add pod label here 
+    app: nginx 
   ports:
     - protocol: TCP
       port: 80
-  type: # add service type here
+  type: NodePort
 
